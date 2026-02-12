@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="Bullet">
+    <defName>Bullet_Sting</defName>
+    <label>Sting</label>
+    <additionalHediffs>
+      <li>
+        <hediff>FLL_Sting</hediff>
+        <severityPerDamageDealt>1</severityPerDamageDealt>
+        <victimSeverityScaling>MoveSpeed</victimSeverityScaling>
+        <inverseStatScaling>true</inverseStatScaling>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+    <impactSoundType>Bullet</impactSoundType>
+  </DamageDef>
+  
+
+</Defs>

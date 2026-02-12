@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <StyleCategoryDef>
+	<defName>FLL_FormerLordeLegion_StylePack</defName>
+	<label>Former Lorde Legion</label>
+	<iconPath>UI/StyleCategories/Legionary</iconPath>
+	
+	<thingDefStyles>
+	<!--Weapons-->
+	
+	<!--Apparel/Armor-->
+	
+	<!--Statues/Furniture-->
+	
+	</thingDefStyles>
+ </StyleCategoryDef>
+</Defs>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ================================= Stingrifle ==================================== -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>FLL_Gun_Stingrifle</defName>
+		<label>Sting rifle</label>
+		<description>TEST TEST</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Stingrifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>		
+		
+		<weaponClasses>
+
+		</weaponClasses>
+
+		<statBases>
+			<MarketValue>1800</MarketValue>
+			<Mass>4</Mass>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.57</AccuracyShort>
+			<AccuracyMedium>0.38</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>2.45</RangedWeapon_Cooldown>
+		</statBases>
+		
+		<costList>
+			<Plasteel>100</Plasteel>
+			<ComponentSpacer>3</ComponentSpacer>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<weaponTags>
+			
+		</weaponTags>
+		<tradeability>Sellable</tradeability>
+		<recipeMaker Inherit="False"/>
+		<comps>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtWeaponMelee</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_StingNail</defaultProjectile>
+				<warmupTime>1.2</warmupTime>
+				<range>28</range>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<burstShotCount>5</burstShotCount>
+				<soundCast>FLL_Sting_shot</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>7</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+	
+		</tools>
+		<tradeTags>
+      
+    </tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_StingNail</defName>
+		<label>Sting</label>
+	
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/StingNail</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet_Sting</damageDef>
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetrationBase>0.40</armorPenetrationBase>
+			<stoppingPower>0.3</stoppingPower>
+			<speed>80</speed>
+
+		</projectile>
+	</ThingDef>
+
+
+	<!-- ================================= BeamMinigun (UNFINISHED) ==================================== -->
+
+  <!--<ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>FLL_Gun_BeamMinigun</defName>
+    <label>beam repeater</label>
+    <description>An ultratech weapon that emits gamma ray laser bursts in a rapid sequence. The tight gamma beams can pierce shields.</description>
+    <graphicData>
+      <texPath>Things/Item/</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+      <li>Ultratech</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.72</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.6</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Plasteel>40</Plasteel>
+      <Steel>30</Steel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>BeamWeapons</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <displayPriority>220</displayPriority>
+    </recipeMaker>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>GunHeavy</li>
+      <li>WeaponBeamRepeater</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_BeamRepeater</defaultProjectile>
+        <warmupTime>4</warmupTime>
+        <range>21.9</range>
+        <burstShotCount>30</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>Shot_BeamRepeater</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <aimingChargeMote>Mote_BeamRepeater_Charge</aimingChargeMote>
+        <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrels</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_BeamRepeater</defName>
+    <label>beam repeater laser</label>
+    <thingClass>Beam</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>BeamBypassShields</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <beamMoteDef>Mote_BeamRepeaterLaser</beamMoteDef>
+      <beamStartOffset>0.5</beamStartOffset>
+      <armorPenetrationBase>0.5</armorPenetrationBase>
+    </projectile>
+  </ThingDef> -->
+</Defs>

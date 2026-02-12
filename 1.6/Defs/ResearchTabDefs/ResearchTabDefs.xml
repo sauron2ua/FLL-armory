@@ -1,0 +1,8 @@
+<Defs>
+  <ResearchTabDef>
+    <defName>FLL_LegionTab</defName>
+    <label>LegionTech</label> 
+    <generalTitle>LegionTech research  projects</generalTitle>
+    <generalDescription>Unlock new technologies by researching at a research bench. You can only have one active project at a time.</generalDescription>
+  </ResearchTabDef>
+</Defs>

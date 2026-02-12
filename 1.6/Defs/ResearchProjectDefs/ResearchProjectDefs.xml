@@ -1,0 +1,25 @@
+<Defs>
+
+	<ResearchProjectDef Name="FLL_ResearchBase" Abstract="True">
+		<techLevel>Spacer</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>FLL_LegionTab</tab>
+	</ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="FLL_ResearchBase">
+		<defName>FLL_LegionaryArsenal</defName>
+		<label>Legionary Arsenal</label>
+        <description>Unlock the foundational weaponary of the Former Lorde`s Legion</description>
+		<baseCost>2000</baseCost>
+		<prerequisites>
+			<li></li>
+		</prerequisites>
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>1.80</researchViewY>
+	</ResearchProjectDef>
+</Defs>
+
+
