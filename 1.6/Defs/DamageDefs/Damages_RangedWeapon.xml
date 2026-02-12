@@ -9,7 +9,6 @@
         <hediff>FLL_Sting</hediff>
         <severityPerDamageDealt>1</severityPerDamageDealt>
         <victimSeverityScaling>MoveSpeed</victimSeverityScaling>
-        <inverseStatScaling>true</inverseStatScaling>
         <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
       </li>
     </additionalHediffs>
