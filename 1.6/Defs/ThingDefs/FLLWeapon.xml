@@ -2,6 +2,24 @@
 <Defs>
 
   <!-- ================================= Stingrifle ==================================== -->
+		<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_StingNail</defName>
+		<label>Sting</label>
+	
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/StingNail</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>FLL_Bullet_Sting</damageDef>
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetrationBase>0.40</armorPenetrationBase>
+			<stoppingPower>0.3</stoppingPower>
+			<speed>80</speed>
+
+		</projectile>
+	</ThingDef>
+	
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>FLL_Gun_Stingrifle</defName>
 		<label>Sting rifle</label>
@@ -55,8 +73,8 @@
 				<defaultProjectile>Bullet_StingNail</defaultProjectile>
 				<warmupTime>1.2</warmupTime>
 				<range>28</range>
-				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-				<burstShotCount>5</burstShotCount>
+				<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+				<burstShotCount>6</burstShotCount>
 				<soundCast>FLL_Sting_shot</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>7</muzzleFlashScale>
@@ -86,25 +104,6 @@
       
     </tradeTags>
 	</ThingDef>
-
-	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_StingNail</defName>
-		<label>Sting</label>
-	
-		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/StingNail</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile>
-			<damageDef>Bullet_Sting</damageDef>
-			<damageAmountBase>11</damageAmountBase>
-			<armorPenetrationBase>0.40</armorPenetrationBase>
-			<stoppingPower>0.3</stoppingPower>
-			<speed>80</speed>
-
-		</projectile>
-	</ThingDef>
-
 
 	<!-- ================================= BeamMinigun (UNFINISHED) ==================================== -->
 

@@ -9,49 +9,17 @@
 
     <comps>
       <li Class="HediffCompProperties_Disappears">
-        <disappearsAfterTicks>1000~3500</disappearsAfterTicks>
+        <disappearsAfterTicks>1000~1500</disappearsAfterTicks>
         <showRemainingTime>true</showRemainingTime>
-      </li>
+      </li>   
     </comps>
     <stages>
 
       <li>
-        <label>initial</label>
-        <minSeverity>0.02</minSeverity>
-
-        <statOffsets>
-          <MoveSpeed>-0.2</MoveSpeed>
-        </statOffsets>
-      </li>
-      <li>
-        <label>minor</label>
-        <minSeverity>0.2</minSeverity>
-        <statOffsets>
-          <MoveSpeed>-0.2</MoveSpeed>
-        </statOffsets>
-      </li>
-      <li>
-        <label>moderate</label>
-        <minSeverity>0.40</minSeverity>
-
-        <statOffsets>
-          <MoveSpeed>-0.2</MoveSpeed>
-        </statOffsets>
-      </li>
-      <li>
-        <label>serious</label>
-        <minSeverity>0.60</minSeverity>
-
-        <statOffsets>
-          <MoveSpeed>-0.2</MoveSpeed>
-        </statOffsets>
-      </li>
-      <li>
         <label>extreme</label>
         <minSeverity>0.80</minSeverity>
-
         <statOffsets>
-          <MoveSpeed>-0.2</MoveSpeed>
+          <MoveSpeed>-0.6</MoveSpeed>
         </statOffsets>
       </li>
     </stages>
