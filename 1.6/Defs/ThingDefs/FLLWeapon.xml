@@ -12,8 +12,8 @@
 		</graphicData>
 		<projectile>
 			<damageDef>FLL_Bullet_Sting</damageDef>
-			<damageAmountBase>11</damageAmountBase>
-			<armorPenetrationBase>0.40</armorPenetrationBase>
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetrationBase>0.35</armorPenetrationBase>
 			<stoppingPower>0.3</stoppingPower>
 			<speed>80</speed>
 
@@ -46,6 +46,15 @@
 			<RangedWeapon_Cooldown>2.45</RangedWeapon_Cooldown>
 		</statBases>
 		
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>ChargedShot</li>
+				<li>FLL_LegionaryArsenal</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>			
+		</recipeMaker>			
 		<costList>
 			<Plasteel>100</Plasteel>
 			<ComponentSpacer>3</ComponentSpacer>
