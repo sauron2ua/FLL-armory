@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>FLL_Box_Eruptor</defName>
+    <label>warcasket eruptor</label>
+    <description>Legion Warcasket container, with Eruptor inside</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/LegionaryWarcasketEruptor_OnFloor</texPath>
+    </graphicData>
+    <costList>
+	    <Plasteel>200</Plasteel>
+	    <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>1250</MarketValue>
+      <Mass>30</Mass>
+      <WorkToBuild>45000</WorkToBuild>
+    </statBases>
+    <researchPrerequisites>
+        <li>FLL_LegionaryArsenal</li>
+    </researchPrerequisites>    
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>FLL_Gun_Eruptor</weaponToEquip>
+		</li>
+	</comps>
+</ThingDef>
+</Defs>

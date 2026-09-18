@@ -17,6 +17,19 @@
         <researchViewX>1.00</researchViewX>
         <researchViewY>1.80</researchViewY>
 	</ResearchProjectDef>
+
+
+	<ResearchProjectDef ParentName="FLL_ResearchBase">
+		<defName>FLL_MechanoidSalvage</defName>
+		<label>Mechanoid Salvaging</label>
+        <description>Unlock the ways to harness mechanoid technology and use it against them</description>
+		<baseCost>3000</baseCost>
+		<prerequisites>
+			<li>FLL_LegionaryArsenal</li>
+		</prerequisites>		
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>2.80</researchViewY>
+	</ResearchProjectDef>	
 </Defs>
 
 

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>HellsphereCore</defName>
+    <label>Hellsphere Core</label>
+    <description>Core part of Diabolous weapon, which failed to self-destruct for an unknown reason.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Resource/HellsphereCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <RoyalFavorValue>0.5</RoyalFavorValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>750</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+</Defs>

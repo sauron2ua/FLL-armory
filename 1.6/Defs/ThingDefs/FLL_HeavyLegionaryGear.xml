@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- ==================================== Heavy Legionary Helmet ===================================== -->
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+		<defName>FLL_HeavyLegionaryWarcasket_Helmet</defName>
+		<label>H-Legionary helmet</label>
+		<description>Reinforced Legionary helmet with mounted combat scanners.</description>
+
+		<costList>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Uranium>20</Uranium>
+			<Plasteel>50</Plasteel>
+			<Steel>30</Steel>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_AdvancedWarcaskets</li>
+			<li>FLL_LegionaryArsenal</li>
+		</researchPrerequisites>
+
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/HeavyLegionary/Helmet/Icon</texPath>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconScale>1.25</uiIconScale>
+
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<ShootingAccuracyPawn>0.75</ShootingAccuracyPawn>
+			<PainShockThreshold>0.1</PainShockThreshold>
+			<SlaveSuppressionOffset>-0.3</SlaveSuppressionOffset>
+			<VacuumResistance>0.60</VacuumResistance>
+			<ToxicEnvironmentResistance>0.55</ToxicEnvironmentResistance>
+		</equippedStatOffsets>
+
+		<statBases>
+			<Mass>8</Mass>
+			<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.2</ArmorRating_Heat>
+			<Insulation_Cold>15</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+
+
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/HeavyLegionary/Helmet/HeavyLegionaryHelmet</wornGraphicPath>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+            <useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+
+			</tags>
+		</apparel>
+	</VFEPirates.WarcasketDef>
+<!-- ==================================== Heavy Legionary Armor ===================================== -->
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>FLL_HeavyLegionaryWarcasket</defName>
+		<label>H-Legionary warcasket</label>
+		<shortDescription>Warcasket shell with mounted experimental shielding</shortDescription>
+		<description>Legionary armor variant, based on Guardian Warcaskets, adjusted for user`s personal safety.</description>
+
+		<costList>
+			<ComponentSpacer>5</ComponentSpacer>
+			<Uranium>80</Uranium>
+			<Plasteel>50</Plasteel>
+			<Steel>200</Steel>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_AdvancedWarcaskets</li>
+			<li>FLL_LegionaryArsenal</li>
+		</researchPrerequisites>		
+		
+		
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/HeavyLegionary/Icon</texPath>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>50</Mass>
+			<ArmorRating_Sharp>1.75</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.10</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.20</ArmorRating_Heat>
+			<Insulation_Cold>24</Insulation_Cold>
+			<Insulation_Heat>15</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+
+			<VEF_EnergyShieldRadiusApparel>1</VEF_EnergyShieldRadiusApparel>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.5</MoveSpeed>
+    		<PainShockThreshold>0.05</PainShockThreshold>
+			<VacuumResistance>0.60</VacuumResistance>
+    		<SlaveSuppressionOffset>-0.6</SlaveSuppressionOffset>
+			<ToxicEnvironmentResistance>0.4</ToxicEnvironmentResistance>
+		</equippedStatOffsets>
+		
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="VEF.Apparels.CompProperties_ShieldField">
+				<shieldColour>(248, 5, 5)</shieldColour>
+				<shieldRadiusStat>VEF_EnergyShieldRadiusApparel</shieldRadiusStat>
+				<manualActivation>true</manualActivation>
+				<workingTimeTicks>1200</workingTimeTicks>
+				<cooldownTicks>10800</cooldownTicks>
+				<activationLabelKey>FLL.OverdriveShield</activationLabelKey>
+				<activationDescKey>FLL.OverdriveShieldDesc</activationDescKey>
+				<activationIconTexPath>UI/Abilities/FLL_ShieldBubbleIcon</activationIconTexPath>
+
+			</li>
+		</comps>
+
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/HeavyLegionary/HeavyLegionary</wornGraphicPath>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+            <useWornGraphicMask>true</useWornGraphicMask>			
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>WarcasketVeteran</li>
+				<li>WarcasketAll</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VEF.Apparels.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_WarcasketTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.7</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
+	</VFEPirates.WarcasketDef>
+<!-- ==================================== Heavy Legionary Shoulders ===================================== -->
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+		<defName>FLL_HeavyLegionaryWarcasket_Shoulders</defName>
+		<label>H-Legionary warcasket shoulders</label>
+		<description>Legionary shoulder pads, adjusted for Warcasket dimensions.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/HeavyLegionary/Shoulders/Icon</texPath>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+
+		<costList>
+			<ComponentSpacer>1</ComponentSpacer>
+			<Uranium>10</Uranium>
+			<Plasteel>50</Plasteel>
+			<Steel>20</Steel>
+		</costList>
+		<researchPrerequisites>
+			<li>VFEP_AdvancedWarcaskets</li>
+			<li>FLL_LegionaryArsenal</li>
+		</researchPrerequisites>
+		
+		<statBases>
+			<Mass>20</Mass>
+			<ArmorRating_Sharp>1.75</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.2</ArmorRating_Heat>
+			<Insulation_Cold>7</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+			<SlaveSuppressionOffset>-0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/HeavyLegionary/Shoulders/HL_Shoulders</wornGraphicPath>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+            <useWornGraphicMask>true</useWornGraphicMask>			
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+
+			</tags>
+		</apparel>
+	</VFEPirates.WarcasketDef>
+
+</Defs>

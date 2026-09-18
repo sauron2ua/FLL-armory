@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- ================================= Eruptor beam ==================================== -->
+	<ThingDef ParentName="MoteBase">
+    	<defName>Mote_DesintegratorBeam</defName>
+    	<thingClass>MoteDualAttached</thingClass>
+    	<altitudeLayer>MoteOverhead</altitudeLayer>
+    	<mote>
+      		<fadeInTime>0.1</fadeInTime>
+      		<fadeOutTime>0.5</fadeOutTime>
+      		<solidTime>0.1</solidTime>
+      		<rotateTowardsTarget>True</rotateTowardsTarget>
+      		<scaleToConnectTargets>True</scaleToConnectTargets>
+    	</mote>
+    	<drawOffscreen>true</drawOffscreen>
+    	<graphicData>
+      		<texPath>Things/Mote/GraserBeam</texPath>
+      		<graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      		<shaderType>MoteBeam</shaderType>
+      		<shaderParameters>
+        		<_ExtraTexA>/Things/Mote/BeamSecondaryNoise_A</_ExtraTexA>
+        		<_ExtraTexB>/Things/Mote/BeamSecondaryNoise_B</_ExtraTexB>
+        		<_ScrollSpeedA>0</_ScrollSpeedA>
+        		<_ScrollSpeedB>0</_ScrollSpeedB>
+        		<_Intensity>7</_Intensity>
+      		</shaderParameters>
+      		<color>(221, 107, 25)</color>
+    	</graphicData>
+	</ThingDef>
+</Defs>

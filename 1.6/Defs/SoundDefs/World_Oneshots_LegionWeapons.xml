@@ -23,4 +23,24 @@
     </subSounds>
   </SoundDef>
  
+  <SoundDef>
+    <defName>FLL_Eruptor_shot</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Eruptor_shot</clipPath>
+          </li>
+        </grains>  
+        <pitchRange>0.95~1.2</pitchRange>
+        <volumeRange>
+          <min>30</min>        
+          <max>35</max>
+        </volumeRange>    
+      </li>
+    </subSounds>
+  </SoundDef>
 </Defs>

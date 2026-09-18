@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+    <FLL.OverdriveShield>Activate Overdrive Shield</FLL.OverdriveShield>
+    <FLL.OverdriveShieldDesc>Click to activate the Overdrive shield. It has 20 seconds of active mode and then 180 seconds cooldown.</FLL.OverdriveShieldDesc>
+
+    <FLL.CastellumShield>Activate Castelium Shield</FLL.CastellumShield>
+    <FLL.CastellumShieldDesc>Click to activate the Castelium shield. It has 20 seconds of active mode and then 180 seconds cooldown.</FLL.CastellumShieldDesc>
+</LanguageData>

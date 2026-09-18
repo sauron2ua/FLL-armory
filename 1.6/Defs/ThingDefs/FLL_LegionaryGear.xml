@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- ==================================== LegionaryNeckGuard ===================================== -->	
+
+	<ThingDef ParentName="ArmorHelmetMakeableBase">
+		<defName>Apparel_LegionaryNeckGuard</defName>
+		<label>Legionary neckguard</label>
+		<description>Protective plate for the neck. Almost perfect solution for those who doesn`t like helmets.</description>
+		<techLevel>Spacer</techLevel>	
+
+   		<recipeMaker>
+			<researchPrerequisite>
+				<li>FLL_LegionaryArsenal</li>
+			</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>ElectricSmithy</li>
+				<li>FabricationBench</li>
+			</recipeUsers>  					
+			<displayPriority>225</displayPriority>
+   		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Plasteel>30</Plasteel>
+    	</costList>	
+
+	
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/LegionaryArmor/LegionaryNeckGuard/LCollar</texPath>
+			<graphicClass>Graphic_Single</graphicClass>			    
+		</graphicData>
+
+    	<equippedStatOffsets>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.2</SlaveSuppressionOffset>
+			<MoveSpeed>-0.05</MoveSpeed>
+   		</equippedStatOffsets>
+		<statBases>
+			<WorkToMake>9000</WorkToMake>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>2</Mass>
+			<Flammability>0.6</Flammability>
+			<ArmorRating_Sharp>1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
+			<Insulation_Cold>5</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>	
+
+    	<thingCategories>
+			<li>ApparelArmor</li>
+    	</thingCategories>
+
+    	<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Neck</li>
+				<li>Mouth</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/LegionaryArmor/LegionaryNeckGuard/LCollar</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+
+			<renderSkipFlags>
+				<li>None</li>
+			</renderSkipFlags>		
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>IndustrialAdvanced</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	
+
+    	<tradeability>Sellable</tradeability>	
+    	<tradeTags>
+			<li>Armor</li>
+    	</tradeTags>	
+	
+	</ThingDef>		
+<!-- ==================================== LegionaryShoulderpads ===================================== -->
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>FLL_LegionaryShoulderpads</defName>
+		<label>Legionary shoulderpads</label>
+		<description>A pair of metal shoulder plates that provides extra arms protection</description>
+		<techLevel>Spacer</techLevel>
+
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>
+				<li>FLL_LegionaryArsenal</li>
+			</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>ElectricSmithy</li>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Plasteel>70</Plasteel>
+    	</costList>
+
+
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/LegionaryArmor/LegionaryPauldrons/LegionaryPauldrons</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+
+		<equippedStatOffsets>
+			<MoveSpeed>-0.05</MoveSpeed>
+		</equippedStatOffsets>		
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToMake>8000</WorkToMake>
+			<Mass>5</Mass>
+			<EquipDelay>6</EquipDelay>
+			<ArmorRating_Sharp>1.30	</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.48</ArmorRating_Heat>			
+		</statBases>
+
+		<thingCategories Inherit='False'>
+			<li>ApparelArmor</li>
+		</thingCategories>
+
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+        		<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/LegionaryArmor/LegionaryPauldrons/LegionaryPauldrons</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+
+			<layers>
+
+                <li>Cape</li>
+                <li>Armor_Cape</li>
+
+			</layers>
+			<tags>
+				
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<drawData>
+                <dataSouth>
+                    <layer>64</layer>
+                </dataSouth>
+                <dataEast>
+                    <layer>90</layer>
+                </dataEast>
+                <dataWest>
+                    <layer>90</layer>
+                </dataWest>
+            </drawData>
+		</apparel>
+
+		<tradeability>Sellable</tradeability>
+		<tradeTags>
+			<li>Armor</li>
+		</tradeTags>
+		
+		<generateCommonality>1</generateCommonality>		
+	</ThingDef>
+
+<!-- ==================================== LegionaryHelmet ===================================== -->
+	<ThingDef ParentName="ArmorHelmetMakeableBase">
+		<defName>FLL_Legionaryhelmet</defName>
+		<label>Legionary helmet</label>
+		<description>Basic helmet for Legion soldiers, equipped with a rebreather that maintains a tolerable oxygen level in vacuum enviorment</description>
+		<techLevel>Spacer</techLevel>
+
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>FLL_LegionaryArsenal</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>		
+		<costList>
+			<ComponentSpacer>1</ComponentSpacer>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Plasteel>60</Plasteel>
+		</costList>
+
+
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/LegionaryArmor/LegionaryHelmet/LegionaryHelmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		
+		<equippedStatOffsets>
+			<PainShockThreshold>0.05</PainShockThreshold>
+			<VacuumResistance>0.60</VacuumResistance>
+			<SlaveSuppressionOffset>-0.2</SlaveSuppressionOffset>
+    		<MoveSpeed>-0.1</MoveSpeed>			
+		</equippedStatOffsets>
+		<statBases>
+			<WorkToMake>28250</WorkToMake>
+			<MaxHitPoints>170</MaxHitPoints>
+			<Mass>1.5</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.20	</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.47</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.48</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Heat>30</Insulation_Heat>
+			<EquipDelay>6</EquipDelay>
+		</statBases>
+
+		<thingCategories Inherit='False'>
+			<li>ArmorHeadgear</li>
+		</thingCategories>
+		<thingSetMakerTags>
+			<li>RewardSpecial</li>
+		</thingSetMakerTags>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/LegionaryArmor/LegionaryHelmet/LegionaryHelmet</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>SpacerMilitary</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+	
+		</apparel>
+
+		<tradeability>Sellable</tradeability>
+		<tradeTags>
+			<li>Armor</li>
+		</tradeTags>
+
+	</ThingDef>
+<!-- ==================================== LegioaryArmor ===================================== -->
+	<ThingDef ParentName="ApparelMakeableBase">
+    	<defName>FLL_LegionaryVest</defName>
+		<label>Legionary vest</label>
+    	<description>Modified and armoured trenchcoat, capable of withstand sub orbit and open space combat</description>
+		<techLevel>Spacer</techLevel>
+	
+    	<recipeMaker>
+    		<researchPrerequisite>FLL_LegionaryArsenal</researchPrerequisite>
+    		<skillRequirements>
+    			<Crafting>10</Crafting>
+    		</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>			
+    		<displayPriority>215</displayPriority>
+    	</recipeMaker>
+    	<costList>
+    		<ComponentSpacer>3</ComponentSpacer>
+			<DevilstrandCloth>40</DevilstrandCloth>
+			<Plasteel>70</Plasteel>
+    	</costList>
+
+
+    	<graphicData>
+    		<texPath>Things/Pawn/Humanlike/Apparel/LegionaryArmor/LegionaryArmor</texPath>
+    		<graphicClass>Graphic_Single</graphicClass>
+    		<shaderType>CutoutComplex</shaderType>
+    	</graphicData>
+
+    	<thingCategories>
+    		<li>ApparelArmor</li>
+    	</thingCategories>
+
+    	<equippedStatOffsets>
+    		<PainShockThreshold>0.05</PainShockThreshold>
+    		<MoveSpeed>-0.1</MoveSpeed>
+    		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.2</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.42</VacuumResistance>
+    	</equippedStatOffsets>
+    	<statBases>
+    		<WorkToMake>45000</WorkToMake>
+    		<MaxHitPoints>450</MaxHitPoints>
+    		<Mass>6</Mass>
+    		<Flammability>0.1</Flammability>
+    		<ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+    		<ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+    		<ArmorRating_Heat>1.1</ArmorRating_Heat>
+			<Insulation_Cold>40</Insulation_Cold>
+			<Insulation_Heat>40</Insulation_Heat>			
+    		<EquipDelay>7</EquipDelay>
+    		<MarketValue>700</MarketValue>
+    	</statBases>
+
+    	<apparel>
+    		<bodyPartGroups>
+    		    <li>Torso</li>
+        		<li>Neck</li>
+        		<li>Shoulders</li>
+        		<li>Arms</li>
+        		<li>Legs</li>
+    		</bodyPartGroups>
+    		<wornGraphicPath>Things/Pawn/Humanlike/Apparel/LegionaryArmor/LegionaryArmor</wornGraphicPath>
+    		<useWornGraphicMask>true</useWornGraphicMask>
+      		<layers>
+				<li>Middle</li>
+        		<li>Shell</li>
+      		</layers>
+      		<tags>
+				<li>SpacerMilitary</li>
+     		</tags>
+      		<defaultOutfitTags>
+       			<li>Soldier</li>
+      		</defaultOutfitTags>
+    	</apparel>
+
+		<tradeability>Sellable</tradeability>
+    	<tradeTags>
+    		<li>Armor</li>
+   		</tradeTags>
+    	<thingSetMakerTags>
+    		<li>RewardStandardHighFreq</li>
+    	</thingSetMakerTags>
+	</ThingDef>
+
+</Defs>

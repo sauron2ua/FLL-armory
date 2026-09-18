@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- ==================================== LegionaryGoggles ===================================== -->
+
+	<ThingDef ParentName="ApparelArmorHelmetReconBase">
+		<defName>FLL_Apparel_LegionaryGoggles</defName>
+		<label>Legionary goggles</label>
+		<description>Legion`s renforced gunlink. Exchanges effectivenes for better eye protection</description>
+		<techLevel>Spacer</techLevel>
+
+		<recipeMaker>
+			<researchPrerequisites>
+				<li MayRequire="Ludeon.RimWorld.Royalty">Gunlink</li>
+				<li>FLL_LegionaryArsenal</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>			
+		</recipeMaker>		
+		<costList>
+			<ComponentSpacer>1</ComponentSpacer>
+			<Uranium>5</Uranium>
+			<Plasteel>40</Plasteel>
+		</costList>
+
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/LegionaryArmor/LegionaryGoggles/LegionaryGoggles</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+
+		<equippedStatOffsets Inherit="false">
+			<ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<statBases>
+			<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.7</ArmorRating_Heat>
+			<Insulation_Cold>0.05</Insulation_Cold>
+			<Insulation_Heat>0.05</Insulation_Heat>
+		</statBases>
+		
+		<apparel>
+			<bodyPartGroups>
+				<li>Eyes</li>
+			</bodyPartGroups>		
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/LegionaryArmor/LegionaryGoggles/LegionaryGoggles</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers Inherit="False">
+				<li>EyeCover</li>
+			</layers>
+			<renderSkipFlags>
+				<li>Eyes</li>
+			</renderSkipFlags>
+
+			<!-- Nightivion, add someday-->
+	
+		</apparel>
+
+    	<randomStyleChance>1</randomStyleChance>
+    	<randomStyle>
+      		<li>
+        		<styleDef>LegionaryGoggles_Standart</styleDef>
+      		</li>
+      		<li>
+        		<styleDef>LegionaryGoggles_Visor</styleDef>
+      		</li>
+   		</randomStyle>	
+
+		<tradeTags>
+			<li>Clothing</li>
+		</tradeTags>
+		<thingSetMakerTags Inherit="False">
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+<!-- ==================================== CastellumBarrier ===================================== -->
+	<ThingDef ParentName="ApparelBase">
+		<defName>FLL_CastellumBarrier</defName>
+		<label>CastellumBarrier</label>
+		<description>CastellumBarrier</description>
+		<techLevel>Spacer</techLevel>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>ShieldBelt</li>
+				<li>FLL_LegionaryArsenal</li>
+			</researchPrerequisites>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<useIngredientsForColor>false</useIngredientsForColor>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<skillRequirements>
+				<Crafting>14</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<ComponentSpacer>2</ComponentSpacer>
+      		<BroadshieldCore>2</BroadshieldCore>
+			<Plasteel>120</Plasteel>
+		</costList>
+
+		<tradeability>Sellable</tradeability>
+		<tradeTags>
+
+		</tradeTags>
+
+
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/CastellumBarrier/CastellumBarrier</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="VEF.Apparels.CompProperties_ShieldField">
+				<shieldColour>(248, 5, 5)</shieldColour>
+				<shieldRadiusStat>VEF_EnergyShieldRadiusApparel</shieldRadiusStat>
+				<manualActivation>true</manualActivation>
+				<workingTimeTicks>2400</workingTimeTicks>
+				<cooldownTicks>21600</cooldownTicks>
+				<activationLabelKey>FLL.CastellumShield</activationLabelKey>
+				<activationDescKey>FLL.CastellumShieldDesc</activationDescKey>
+				<activationIconTexPath>UI/Abilities/FLL_FieldBubbleIcon</activationIconTexPath>
+
+			</li>
+		</comps>
+
+		<equippedStatOffsets>
+			<MoveSpeed>-2.2</MoveSpeed>
+    		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.6</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+
+		<statBases>
+			<WorkToMake>24000</WorkToMake>
+			<Mass>20</Mass>
+			<Flammability>0.4</Flammability>
+			<EquipDelay>2</EquipDelay>
+
+			<VEF_EnergyShieldRadiusApparel>4</VEF_EnergyShieldRadiusApparel>
+		</statBases>
+		<thingCategories>
+			<li>ApparelUtility</li>
+		</thingCategories>
+		<generateAllowChance>0.15</generateAllowChance>
+
+
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/CastellumBarrier/CastellumBarrier</wornGraphicPath>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<careIfDamaged>false</careIfDamaged>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+			<tags>
+
+			</tags>
+			<wornGraphicData>
+				<renderUtilityAsPack>true</renderUtilityAsPack>
+				<north>
+				<offset>(0,-0.05)</offset>
+				</north>
+				<south>
+				<offset>(0,0.15)</offset>
+				</south>
+				<east>
+				<offset>(-0.35,0.0)</offset>
+				<thin><offset>(0.05,0)</offset></thin>
+				<hulk><offset>(-0.15,0)</offset></hulk>
+				<fat> <offset>(-0.20,0)</offset></fat>
+				</east>
+				<west>
+				<offset>(0.35,0.0)</offset>
+				<thin><offset>(-0.05,0)</offset></thin>
+				<hulk><offset>(0.15,0)</offset></hulk>
+				<fat> <offset>(0.20,0)</offset></fat>
+				</west>
+
+				<male>  <scale>(0.8,0.8)</scale></male>
+				<female><scale>(0.8,0.8)</scale></female>
+				<thin>  <scale>(0.8,0.8)</scale></thin>
+				<hulk>  <scale>(0.95,0.95)</scale></hulk>
+				<fat>   <scale>(0.95,0.95)</scale></fat>
+			</wornGraphicData>
+		</apparel>
+	</ThingDef>
+        
+</Defs>

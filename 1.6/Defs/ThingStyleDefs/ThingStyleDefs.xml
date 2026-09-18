@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<!-- Ranged Weapons -->
-	
-	<!--Apparel/Armor-->
-
-	<!--Statues/Furniture-->
-
+	<!-- Googles -->
+ <ThingStyleDef>
+    <defName>LegionaryGoggles_Standart</defName>
+    <wornGraphicPath>Things/Pawn/Humanlike/Apparel/LegionaryArmor/LegionaryGoggles/LegionaryGoggles</wornGraphicPath>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/LegionaryArmor/LegionaryGoggles/LegionaryGoggles</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <useWornGraphicMask>true</useWornGraphicMask>
+  </ThingStyleDef>
+  
+  <ThingStyleDef>
+    <defName>LegionaryGoggles_Visor</defName>
+    <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Variations/LegionaryVisor/LegionaryVisor</wornGraphicPath>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Variations/LegionaryVisor/LegionaryVisor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <useWornGraphicMask>true</useWornGraphicMask>
+  </ThingStyleDef>
 </Defs>

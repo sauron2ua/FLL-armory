@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- ================================= Stingrifle ==================================== -->
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_StingNail</defName>
+		<label>Sting</label>
+	
+		<graphicData>
+			<texPath>Things/Projectile/StingNail</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>FLL_Bullet_Sting</damageDef>
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetrationBase>0.35</armorPenetrationBase>
+			<stoppingPower>0.4</stoppingPower>
+			<speed>80</speed>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>FLL_Gun_Stingrifle</defName>
+		<label>Sting rifle</label>
+		<description>Standart-issue Legionary weapon. Fires a disolving nails that can slows any target on impact.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Stingrifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>		
+		
+		<weaponClasses>
+
+		</weaponClasses>
+
+		<weaponTags>
+			
+		</weaponTags>
+
+		<statBases>
+			<MarketValue>1800</MarketValue>
+			<Mass>5</Mass>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.57</AccuracyShort>
+			<AccuracyMedium>0.38</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>2.45</RangedWeapon_Cooldown>
+		</statBases>
+		
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>ChargedShot</li>
+				<li>FLL_LegionaryArsenal</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>			
+		</recipeMaker>			
+		<costList>
+			<Plasteel>70</Plasteel>
+			<ComponentSpacer>3</ComponentSpacer>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+
+		<tradeability>Sellable</tradeability>
+
+
+		<comps>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtWeaponGun</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_StingNail</defaultProjectile>
+				<warmupTime>1.2</warmupTime>
+				<range>28</range>
+				<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+				<burstShotCount>6</burstShotCount>
+				<soundCast>FLL_Sting_shot</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>7</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+	
+		</tools>
+		<tradeTags>
+    	</tradeTags>
+	</ThingDef>
+
+<!-- ================================= Eruptor (WARCASKET) ==================================== -->
+	<!-- shoots a barrage of lazer beams, like Pirates charge minigun -->
+	<ThingDef ParentName="BaseBullet">
+		<defName>Beam_Eruptor</defName>
+		<label>Beam</label>
+		<thingClass>Beam</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<modExtensions>
+			<li Class="VEF.Graphics.FloorGraphicExtension">
+				<graphicData>
+					<graphicClass>Graphic_Single</graphicClass>
+					<texPath>Things/Item/Equipment/WeaponRanged/LegionaryWarcasketEruptor_OnFloor</texPath>
+					<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+					<drawSize>1</drawSize>
+				</graphicData>
+			</li>
+		</modExtensions>
+
+		<projectile>
+			<damageDef>BeamBypassShields</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationBase>0.5</armorPenetrationBase>
+			<stoppingPower>0.3</stoppingPower>
+			<beamMoteDef>Mote_EruptorBeam</beamMoteDef>
+      		<beamStartOffset>1</beamStartOffset>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="VFEP_BaseWarcasketGun">
+		<defName>FLL_Gun_Eruptor</defName>
+		<label>Eruptor</label>
+		<description>Empowered dual barreled beam emitter</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Eruptor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.33, 1.33)</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>		
+		
+		<weaponClasses>
+
+		</weaponClasses>
+
+		<weaponTags>
+			
+		</weaponTags>
+
+		<statBases>
+			<MarketValue>2600</MarketValue>
+			<Mass>20</Mass>
+			<AccuracyTouch>0.35</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.50</AccuracyMedium>
+			<AccuracyLong>0.45</AccuracyLong>
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>45</equippedAngleOffset>
+    	<equippedStatOffsets>
+      		<MoveSpeed>-0.3</MoveSpeed>
+    	</equippedStatOffsets>		
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>BeamWeapons</li>
+				<li>FLL_LegionaryArsenal</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>14</Crafting>
+			</skillRequirements>			
+		</recipeMaker>			
+		<costList>
+			<Plasteel>150</Plasteel>
+			<Uranium>25</Uranium>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+
+		<tradeability>Sellable</tradeability>
+		<recipeMaker Inherit="False"/>
+
+		<comps>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtWeaponGun</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Beam_Eruptor</defaultProjectile>
+				<aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+				
+				<warmupTime>4</warmupTime>
+				<range>33</range>
+				<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+				<burstShotCount>20</burstShotCount>
+				<soundCast>FLL_Eruptor_shot</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>3</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>2.8</cooldownTime>
+			</li>
+	
+		</tools>
+		<tradeTags>
+    	</tradeTags>
+	</ThingDef>
+
+<!-- ================================= Desintegrator (UNFINISHED) ==================================== -->
+	<!-- Ultraheavy siege weapon, aka human variant of hellspire cannon with three explosive beams -->
+ 	<ThingDef ParentName="BaseBullet">
+
+    	<defName>Bullet_Desintegrator</defName>
+    	<label>hellsphere cannon shot</label>
+		<thingClass>Projectile_Explosive</thingClass>
+    	<graphicData>
+      		<texPath>Things/Projectile/HellsphereCannon</texPath>
+      		<graphicClass>Graphic_Single</graphicClass>
+      		<shaderType>MoteGlow</shaderType>
+      		<drawSize>(1.5, 3)</drawSize>
+    	</graphicData>
+    	<projectile>
+      		<damageDef>Vaporize</damageDef>
+      		<speed>70</speed>
+      		<explosionRadius>2.4</explosionRadius>
+      		<screenShakeFactor>1</screenShakeFactor>
+      		<filth>Filth_BlastMark</filth>
+      		<filthCount>1</filthCount>
+      		<explosionSpawnsSingleFilth>true</explosionSpawnsSingleFilth>
+    	</projectile>
+  	</ThingDef>
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>FLL_Gun_Desintegrator</defName>
+		<label>Desintegrator cannon</label>
+		<description>Reverse engineered Hellspire cannon to be usable with human hands. As its original counterpart, designed to breach fortifications, especially spaceship hulls. Due to rather crude mechanisms, weapons range literally reversed, being effective only from far distances</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Desintegrator</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>		
+		
+		<weaponClasses>
+
+		</weaponClasses>
+
+		<weaponTags>
+			
+		</weaponTags>
+
+		<statBases>
+			<MarketValue>6000</MarketValue>
+			<Mass>30</Mass>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>FLL_MechanoidSalvage</li>
+				<li>BeamWeapons</li>
+				<li>FLL_LegionaryArsenal</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>16</Crafting>
+			</skillRequirements>			
+		</recipeMaker>			
+		<costList>
+			<Plasteel>500</Plasteel>
+			<ComponentSpacer>7</ComponentSpacer>
+			<HellsphereCore>1</HellsphereCore>
+		</costList>
+		<thingSetMakerTags>
+
+		</thingSetMakerTags>
+
+		<tradeability>Sellable</tradeability>
+
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Desintegrator</defaultProjectile>
+				<aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+				<minRange>16</minRange>
+				<warmupTime>15</warmupTime>
+				<range>42</range>
+				<ticksBetweenBurstShots>33</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>FLL_Eruptor_shot</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>16</muzzleFlashScale>
+				<forcedMissRadius>6</forcedMissRadius>
+				<requireLineOfSight>true</requireLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+					<canTargetPawns>false</canTargetPawns>
+				</targetParams>
+        		<soundAiming>HellsphereCannon_Aiming</soundAiming>		
+				<aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>	
+				<aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>	
+        		<aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+
+				<canGoWild>false</canGoWild>
+
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>Claws</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>5</cooldownTime>
+			</li>
+	
+		</tools>
+		<relicChance>0</relicChance>
+		<tradeTags>
+    	</tradeTags>
+	</ThingDef>
+
+</Defs>

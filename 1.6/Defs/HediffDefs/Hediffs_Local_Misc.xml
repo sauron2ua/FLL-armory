@@ -3,8 +3,8 @@
   <HediffDef>
     <defName>FLL_Sting</defName>
     <hediffClass>HediffWithComps</hediffClass>
-    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
-    <description>Stings in target`s body temporarily restricts the movement</description>
+    <defaultLabelColor>(15, 15, 15)</defaultLabelColor>
+    <description>Stings in target`s body temporarily restricts the movement in exchange for reduced damage.</description>
     <label>Supression stings</label>
 
     <comps>
@@ -16,10 +16,10 @@
     <stages>
 
       <li>
-        <label>extreme</label>
+        <label>Slowdown</label>
         <minSeverity>0.80</minSeverity>
         <statOffsets>
-          <MoveSpeed>-0.6</MoveSpeed>
+          <MoveSpeed>-0.8</MoveSpeed>
         </statOffsets>
       </li>
     </stages>
