@@ -80,7 +80,7 @@
 	<ThingDef ParentName="ApparelBase">
 		<defName>FLL_CastellumBarrier</defName>
 		<label>CastellumBarrier</label>
-		<description>CastellumBarrier</description>
+		<description>Low-shield pack variant. Lets operator to move with shield active and not break its core in the process. Main downside - heavy weight.</description>
 		<techLevel>Spacer</techLevel>
 		<recipeMaker>
 			<researchPrerequisites>
@@ -148,7 +148,7 @@
 		<thingCategories>
 			<li>ApparelUtility</li>
 		</thingCategories>
-		<generateAllowChance>0.15</generateAllowChance>
+		<generateAllowChance>0</generateAllowChance>
 
 
 		<apparel>
