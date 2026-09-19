@@ -142,8 +142,7 @@
 
 			<layers>
 
-                <li>Cape</li>
-                <li>Armor_Cape</li>
+                <li>Shell</li>
 
 			</layers>
 			<tags>
@@ -318,7 +317,6 @@
     		<useWornGraphicMask>true</useWornGraphicMask>
       		<layers>
 				<li>Middle</li>
-        		<li>Shell</li>
       		</layers>
       		<tags>
 				<li>SpacerMilitary</li>

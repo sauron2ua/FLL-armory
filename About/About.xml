@@ -29,11 +29,7 @@
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1989352844</steamWorkshopUrl>
 		</li>
 
-		<li>
-			<packageId>Yy.CapesandArmor</packageId>
-			<displayName>Layers: Capes and Armor</displayName>
-			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3344566457</steamWorkshopUrl>
-		</li>
+
 
 		<li>
 		    <packageId>Ludeon.RimWorld.Ideology</packageId>
@@ -46,11 +42,16 @@
 		<li>
 		    <packageId>Ludeon.RimWorld.Biotech</packageId>
 		    <displayName>Biotech</displayName>
-	    </li>			
+	    </li>		
+		<li>
+		    <packageId>Ludeon.RimWorld.Royalty</packageId>
+		    <displayName>Royalty</displayName>
+	    </li>				
 	</modDependencies>
 	<loadAfter>
 		<li>ludeon.rimworld</li>
 		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Royalty</li>		
 		<li>Ludeon.RimWorld.Odyssey</li>
 		<li>Ludeon.RimWorld.Biotech</li>
 		<li>OskarPotocki.VFE.Pirates</li>
